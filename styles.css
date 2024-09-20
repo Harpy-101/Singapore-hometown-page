@@ -1,0 +1,161 @@
+body {
+    background: url('skyline-silhouette.png') no-repeat bottom;
+    background-size: cover;
+    background-color: #1b1b1b;
+    color: aliceblue;
+    text-shadow: 0 0 1px black;
+    text-align: center;
+}
+
+.hero {
+    background-image: url(media/Singapore-3.jpg);
+    height: 343px;
+    width: 770px;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.hero-text { 
+    text-align: center;
+    padding-top: 1px;
+    color: aliceblue;
+}
+
+.box {
+    border: 5px solid aliceblue;
+    padding: 2px 4px;
+    box-shadow: 0 0 1px black;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.img-box {
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-left: 10px;
+}
+
+.img-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;  
+    transition: filter 0.5s ease;  /* Smooth blur effect */
+}
+
+
+.botanic-gardens-img::before {
+    background-image: url(media/singapore-botanig-gardens.jpg);
+    background-position: center;
+}
+
+.hotel-img::before {
+    background-image: url(media/Singapore_-_Marina_Bay_Sands_Hotel_Infinity_Pool_IMG_4678.jpg);
+    background-position: center;
+}
+
+.tree-grove-img::before {
+    background-image: url(media/supertree-grove.jpg);
+    background-position: center;
+}
+
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 0 0 10px black;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s;
+    z-index: 2;
+    font-size: large;
+}
+
+.img-box:hover::before {
+    filter: blur(5px);
+}
+
+.img-box:hover .hidden-text {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.botanic-gardens-img:hover .hidden-text {
+    display: block;
+    text-shadow: 0 0 2px black;
+    color: aliceblue;
+    text-align: center;
+}
+
+.hotel-img:hover .hidden-text {
+    display: block;
+    text-shadow: 0 0 2px black;
+    color: aliceblue;
+    text-align: center;
+}
+
+.tree-grove-img:hover .hidden-text {
+    display: block;
+    text-shadow: 0 0 2px black;
+    color: aliceblue;
+    text-align: center;
+}
+
+.f1 {
+    height: 490px;
+    width: 780px;
+    margin-left: 0 auto;
+    background-size: cover;
+    margin: 40px auto;
+    position: relative;
+}
+
+.f1-gp-img {
+    background-image: url(/media/singapore-f1.jpg);
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.text-gp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: aliceblue;
+    text-shadow: 0 0 5px black;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s;
+    z-index: 2;
+    font-size: large;
+    width: 50%;
+    padding-top: 300px;
+    padding-right: 350px;
+}
+
+.f1-gp-img:hover .text-gp  {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
